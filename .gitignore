@@ -1,0 +1,43 @@
+# Angular specific
+/node_modules
+/dist
+/tmp
+/out-tsc
+/aot
+/.angular
+
+# Angular CLI specific
+.angular/cache
+.angular/errors.log
+
+# Editor specific
+.idea
+.vscode
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Miscellaneous
+*.log
+*.lock
+*.bak
+*.tmp
+*.swp
+*.swo
+*.out
+
+# IDE-specific files
+*.iml
+
+# Environment files
+.env
+.env.*.local
