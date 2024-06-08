@@ -1,0 +1,32 @@
+.popup-body {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .content {
+        width: 40%;
+        height: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border-radius: 4px;
+
+        ::ng-deep .actions {
+            margin-top: 2rem;
+
+            .btn-secondary {
+                margin-right: 0.5rem;
+            }
+
+            .btn-primary {
+                margin-left: 0.5rem;
+            }
+        }
+    }
+}

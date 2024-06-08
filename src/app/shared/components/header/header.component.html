@@ -1,1 +1,20 @@
-<p>header works!</p>
+<div class="header-body">
+    <div class="header-title">
+        <h3 routerLink="/book/home">Book Meeting Room</h3>
+    </div>
+
+    <div class="header-actions">
+        <div class="profile" routerLink="/book/profile">
+            UserName
+        </div>
+        <div class="logout" (click)="onLogout()">Log Out</div>
+    </div>
+</div>
+
+<app-pop-up *ngIf="isLogout">
+    <h2>Are you sure, you want to Log Out?</h2>
+    <div class="actions">
+        <button class="btn-secondary" (click)="cancel()">Cancel</button>
+        <button class="btn-primary" (click)="logout()">Log Out</button>
+    </div>
+</app-pop-up>

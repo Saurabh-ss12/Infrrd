@@ -1,1 +1,46 @@
-<p>login works!</p>
+<div class="login-body">
+  <h2 class="title">BOOK A MEETING ROOM</h2>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <div class="input-group">
+      <label>User Name</label>
+      <br />
+      <input
+        type="text"
+        placeholder="User Name"
+        name="username"
+        ngModel
+        #username="ngModel"
+        required
+      />
+      <p class="error" *ngIf="username.touched && username.invalid">
+        *Username is Required
+      </p>
+    </div>
+
+    <div class="input-group">
+      <label>Password</label>
+      <br />
+      <input
+        type="password"
+        placeholder="Password"
+        name="password"
+        ngModel
+        #password="ngModel"
+        required
+      />
+      <p class="error" *ngIf="password.touched && password.invalid">
+        *Password is Required
+      </p>
+    </div>
+
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+    <div class="submit">
+      <button class="btn-primary" type="submit" [disabled]="!f.valid">
+        <span *ngIf="!isValidating">Login</span>
+        <img *ngIf="isValidating" src="assets/loading.gif" />
+      </button>
+    </div>
+  </form>
+</div>

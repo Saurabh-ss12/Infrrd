@@ -15,6 +15,7 @@
 .vscode
 .project
 .classpath
+.prettierrc
 .c9/
 *.launch
 .settings/
